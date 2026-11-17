@@ -36,7 +36,7 @@ def run_soc():
 
     print("[Step 1/3] ⚙️ Compiling RISC-V Core, APB Bus, & UART IP with Icarus Verilog...")
     cmd_compile = [IVERILOG_PATH, "-g2005", "-o", vvp_out] + rtl_files + [tb_file]
-    res_comp = subprocess.run(cmd_compile, capture_output=True, text=True, check=False)
+    res_comp = subprocess.run(cmd_compile, capture_output=True, text=True, encoding="utf-8", errors="replace", check=False)
 
     if res_comp.returncode != 0:
         print("❌ Compilation Failed:\n", res_comp.stderr)
@@ -44,8 +44,8 @@ def run_soc():
     print("✅ Compilation Successful -> Generated:", vvp_out)
 
     print("[Step 2/3] 🔬 Executing VVP Simulation Engine & Monitoring UART Stream...")
-    res_sim = subprocess.run([VVP_PATH, vvp_out], capture_output=True, text=True, check=False)
-    output = res_sim.stdout + ("\n" + res_sim.stderr if res_sim.stderr else "")
+    res_sim = subprocess.run([VVP_PATH, vvp_out], capture_output=True, text=True, encoding="utf-8", errors="replace", check=False)
+    output = (res_sim.stdout or "") + ("\n" + res_sim.stderr if res_sim.stderr else "")
     print(output)
 
     if "100% RISC-V SOC VERIFICATION PASSED" in output:
