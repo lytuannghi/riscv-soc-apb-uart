@@ -3,3 +3,7 @@
 __pycache__/
 *.pyc
 *.vvp
+*.vcd
+*GIAI_THICH*.md
+*HUONG_DAN*.md
+*INTERVIEW*.md
