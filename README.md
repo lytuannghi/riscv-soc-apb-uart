@@ -1,4 +1,4 @@
-# 🚀 RISC-V RV32I Mini-SoC with AMBA APB UART IP Core
+# RISC-V RV32I Mini-SoC with AMBA APB UART IP Core
 
 [![Simulation](https://img.shields.io/badge/Simulation-100%25%20PASSED-brightgreen.svg?style=for-the-badge&logo=checkmarx)](https://github.com/lytuannghi)
 [![ISA](https://img.shields.io/badge/ISA-RISC--V%20RV32I-blue.svg?style=for-the-badge)](https://riscv.org/)
@@ -16,7 +16,7 @@ Designed and verified by **Lý Tuấn Nghi ([@lytuannghi](https://github.com/lyt
 
 ---
 
-## 🏗️ SoC Hardware Architecture
+## SoC Hardware Architecture
 
 ```mermaid
 flowchart TD
@@ -39,27 +39,27 @@ flowchart TD
 
 ---
 
-## 📊 Verification & Co-Simulation Results
+## Verification & Co-Simulation Results
 
 ```text
 ========================================================
-🚀 STARTING RISC-V MINI-SOC AUTOMATED VERIFICATION
+ STARTING RISC-V MINI-SOC AUTOMATED VERIFICATION
 ========================================================
-ℹ️  CPU Reset Released. Fetching instructions from ROM...
-📡 UART CONSOLE OUTPUT: HELLO RISC-V!
+  CPU Reset Released. Fetching instructions from ROM...
+ UART CONSOLE OUTPUT: HELLO RISC-V!
 --------------------------------------------------------
-📊 VERIFYING ON-CHIP DATA MEMORY (RAM):
-✅ [PASS] Fibonacci Sequence in RAM: F(7) = 13 Verified!
-✅ [PASS] Firmware Completion Signature Verified (0x12345678)!
-✅ [PASS] UART Serial Transmission Verified (Received 13 characters)!
+ VERIFYING ON-CHIP DATA MEMORY (RAM):
+ [PASS] Fibonacci Sequence in RAM: F(7) = 13 Verified!
+ [PASS] Firmware Completion Signature Verified (0x12345678)!
+ [PASS] UART Serial Transmission Verified (Received 13 characters)!
 ========================================================
-🏆 STATUS: 100% RISC-V SOC VERIFICATION PASSED!
+ STATUS: 100% RISC-V SOC VERIFICATION PASSED!
 ========================================================
 ```
 
 ---
 
-## ⚡ Quickstart
+## Quickstart
 
 ```powershell
 # Run the complete hardware/software co-simulation
